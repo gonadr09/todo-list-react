@@ -22,7 +22,8 @@ function MainCard() {
     }));
   };
 
-  const addTask = () => {
+  const addTask = (e) => {
+    e.preventDefault()
     if (newTask.name && newTask.date) {
       const newObjTask = {
         id: uuidv4(),
@@ -31,6 +32,7 @@ function MainCard() {
         done: false,
       }
       setTaskList((tasksList) => [...tasksList, newObjTask]);
+      setNewTask({ name: "", date: "" })
     }
   };
 

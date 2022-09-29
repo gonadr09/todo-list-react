@@ -4,7 +4,7 @@ function NewTask({ newTask, handleChange, addTask }) {
   return (
     <div className="new-task">
       <h3>Nueva tarea:</h3>
-      <div className="inputs-box">
+      <form className="inputs-box">
         <input
           type="text"
           name="name"
@@ -27,7 +27,7 @@ function NewTask({ newTask, handleChange, addTask }) {
         <button type="submit" onClick={addTask}>
           Añadir +
         </button>
-      </div>
+      </form>
       <p className="warning">
         *Completá ambos campos para agregar una nueva tarea
       </p>
