@@ -1,10 +1,10 @@
 import React from "react";
 
-function NewTask({ newTask, handleChange, addTask }) {
+function NewTask({ newTask, handleChange, handleSubmit }) {
   return (
     <div className="new-task">
       <h3>Nueva tarea:</h3>
-      <form className="inputs-box">
+      <form className="inputs-box" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -24,7 +24,7 @@ function NewTask({ newTask, handleChange, addTask }) {
           required
         ></input>
 
-        <button type="submit" onClick={addTask}>
+        <button type="submit">
           Añadir +
         </button>
       </form>

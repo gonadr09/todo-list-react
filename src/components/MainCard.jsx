@@ -14,15 +14,14 @@ function MainCard() {
   const [tasksList, setTaskList] = useState(modelTest);
 
   const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
+    const {name, value} = e.target;
     setNewTask((values) => ({
       ...values,
       [name]: value,
     }));
   };
 
-  const addTask = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     if (newTask.name && newTask.date) {
       const newObjTask = {
@@ -63,7 +62,7 @@ function MainCard() {
       <NewTask
         newTask={newTask}
         handleChange={handleChange}
-        addTask={addTask}
+        handleSubmit={handleSubmit}
       />
       <TaskList tasksList={tasksList} handleTaskDone={handleTaskDone} handleDeleteTask={handleDeleteTask} />
     </div>
