@@ -1,4 +1,4 @@
-const testModel = [
+const testTasksModel = [
   {
     id: "1f1720d1-4e90-41c2-b2de-3098700638c3",
     name: "Hacer las compras",
@@ -13,4 +13,4 @@ const testModel = [
   },
 ];
 
-export default testModel
+export default testTasksModel

@@ -1,11 +1,11 @@
 import "./App.css";
-import MainCard from "./components/MainCard";
+import ToDo from "./views/ToDo";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <MainCard />
+        <ToDo />
       </header>
     </div>
   );

@@ -1,14 +1,14 @@
 import React from "react";
 import useToDo from "../hooks/useToDo";
 import useForm from "../hooks/useForm";
-import formModel from "../helpers/formModel";
-import testModel from "../helpers/testModel";
-import NewTask from "./NewTask";
-import TaskList from "./TaskList";
+import newTaskForm from "../helpers/newTaskForm";
+import testTasksModel from "../services/testTasksModel";
+import NewTask from "../components/NewTask";
+import TaskList from "../components/TaskList";
 
 const MainCard = () => {
-  const { tasksList, setTaskList, handleTaskDone, handleDeleteTask } = useToDo(testModel);
-  const { newTask, handleChange, handleSubmit } = useForm(formModel, tasksList, setTaskList);
+  const { tasksList, setTaskList, handleTaskDone, handleDeleteTask } = useToDo(testTasksModel);
+  const { newTask, handleChange, handleSubmit } = useForm(newTaskForm, tasksList, setTaskList);
 
   return (
     <div>
