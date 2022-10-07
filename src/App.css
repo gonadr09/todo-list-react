@@ -67,7 +67,7 @@ input {
   outline: none;
 }
 
-button {
+.submit {
   border-radius: 5px;
   border: none;
   padding: 10px;
@@ -75,4 +75,18 @@ button {
   background-color: #1ea0c4;
   color: #ffffff;
   cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: transparent ;
+  border: none;
+  color: #ffffff;
+}
+
+.checkbox > svg {
+  padding: 0;
+  width: 20px;
+  height: 20px;
 }

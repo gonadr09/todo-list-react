@@ -1,6 +1,6 @@
 import React from "react";
 
-function NewTask({ newTask, handleChange, handleSubmit }) {
+const NewTask = ({ newTask, handleChange, handleSubmit }) => {
   return (
     <div className="new-task">
       <h3>Nueva tarea:</h3>
@@ -24,7 +24,7 @@ function NewTask({ newTask, handleChange, handleSubmit }) {
           required
         ></input>
 
-        <button type="submit">
+        <button type="submit" className="submit">
           Añadir +
         </button>
       </form>
